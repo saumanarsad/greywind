@@ -6,12 +6,16 @@ app.use(function(req,res,next){  //Middleware
     next();
 });
 
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+
 app.get('/',function(req,res){
     res.send('hello world');
 });
 
 app.get('/profile',function(req,res,next){
-    return next(new Error("Something is not right"));
+    return next(new Error("Something is not right "));
     res.send('my profile');
 });
 app.use(function(err,req,res,next){
