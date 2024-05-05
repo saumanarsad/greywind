@@ -1,0 +1,24 @@
+h1 {
+    color: blue;
+    text-decoration: line-through;
+}
+
+
+
+button {
+    background-color: burlywood;
+    color: aqua;
+}
+
+#box {
+    height: 200px;
+    width: 100px;
+    background-color: red;
+    color: wheat;
+}
+
+/* Id is accessed by #
+Class is accessed by . 
+By class returns an html collection
+
+*/
