@@ -16,4 +16,8 @@ app.get('/profile/:username',function(req,res){
     res.send(req.params.username);
 })
 
+app.get('/profile/:name/:age',function(req,res){
+    res.send(req.params.age);
+})
+
 app.listen(3000);
