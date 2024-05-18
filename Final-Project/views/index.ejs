@@ -9,13 +9,40 @@
 </head>
 
 <body>
-    <div class="main w-full min-h-screen bg-white">
-        <div class="form p-10">
-            <form action="">
-                <input class="block px-5 py-2 bg-zinc-900" type="text" title="Text" placeholder="Title Goes here">
-                <textarea class="mt-2 block px-5 py-2 resize-none bg-zinc-90" placeholder="Details"></textarea>
-                <input type="mt-2 submit" value="Create task">
+    <div class="main w-full min-h-screen bg-zinc-900">
+        <div class="form p-10 text-white">
+            <form action="/create" method="post">
+                <input class="block w-full px-5 py-2 outline-none bg-zinc-800" type="text" title="Text"
+                    placeholder="Title Goes here" name="title">
+                <textarea name="details" class="mt-2 w-full block px-5 py-2 resize-none bg-zinc-800"
+                    placeholder="Details"></textarea>
+                <input type="submit" value="Create task" class="mt-2 bg-blue-600 px-5 py-2 rounded-md">
             </form>
+        </div>
+        <div class=" flex gap-3 flex-wrap tasks p-10">
+            <% if (myfiles.length> 0) { %>
+                <% myfiles.forEach(function(val) { %>
+                    <div class="task w-72  px-3 py-4 bg-zinc-800 rounded-md">
+                        <h1 class="text-white text-3xl tracking-tighter">Some task goes here</h1>
+                        <a class="text-blue-500 inline-block mt-3">Read More</a>
+                    </div>
+                    <% }); %>
+                        <% } else { %>
+                            <h3 class="text-zinc-600">No tasks here.</h3>
+                            <% } %>
+                                <div class="task w-72 hidden px-3 py-4 bg-zinc-800 rounded-md">
+                                    <h1 class="text-white text-3xl tracking-tighter">Some task goes here</h1>
+                                    <a class="text-blue-500 inline-block mt-3">Read More</a>
+                                </div>
+                                <div class="task w-72 hidden px-3 py-4 bg-zinc-800 rounded-md">
+                                    <h1 class="text-white text-3xl tracking-tighter">Some task goes here</h1>
+                                    <a class="text-blue-500 inline-block mt-3">Read More</a>
+                                </div>
+                                <div class="task w-72 hidden px-3 py-4 bg-zinc-800 rounded-md">
+                                    <h1 class="text-white text-3xl tracking-tighter">Some task goes here</h1>
+                                    <a class="text-blue-500 inline-block mt-3">Read More</a>
+                                </div>
+                              
         </div>
     </div>
 </body>
