@@ -4,6 +4,11 @@ const users = require('./MOCK_DATA.json');
 const fs = require('fs');
 app.use(express.urlencoded({ extended: false })); //Middleware
 
+app.use((req, res, next) => {
+    console.log("Hello world");
+    next();
+});
+
 
 app.route('/api/users')
     .get((req, res) => {
