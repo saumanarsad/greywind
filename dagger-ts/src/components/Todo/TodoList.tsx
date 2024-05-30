@@ -8,7 +8,6 @@ const TodoList: React.FC = () => {
                 <TodoItem />
                 <TodoItem />
                 <TodoItem />
-                <TodoItem />
             </ol>
         </div>
     );
