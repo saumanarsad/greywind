@@ -1,9 +1,12 @@
 import React from "react";
 import './TodoItem.css';
+interface TodoItemProps {
+    title: string;
+}
 
-const TodoItem: React.FC = () => {
+const TodoItem: React.FC<TodoItemProps> = (props) => {
     return (
-        <li>I am a todo list</li>
+        <li>{props.title}</li>
     );
 }
 export default TodoItem;
