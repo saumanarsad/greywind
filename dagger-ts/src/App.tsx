@@ -1,6 +1,6 @@
 import React from "react";
 import TodoList from "./components/Todo/TodoList";
-
+import Counter from "./components/Counter/counter";
 const myItems = [
     {
         'id': 1,
@@ -25,6 +25,7 @@ const App: React.FC = () => {
     return (
         <div>
             <TodoList items={myItems} />
+            <Counter />
         </div>
     );
 }
