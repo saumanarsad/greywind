@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './counter.css';
 import { count } from "console";
 const Counter: React.FC = (props) => {
     let [counter, setCounter] = useState(0);
+    useEffect(() => {
+        console.log("Counter Mounted");
+    }, [counter])
+
     const handleIncrement = () => {
         setCounter(counter + 1);
     }
