@@ -5,6 +5,9 @@ const Counter: React.FC = (props) => {
     let [counter, setCounter] = useState(0);
     useEffect(() => {
         console.log("Counter Mounted");
+        return () => {
+            console.log("Unmounted");
+        }
     }, [counter])
 
     const handleIncrement = () => {
