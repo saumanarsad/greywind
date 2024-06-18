@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './sidebar.css';
 import { assets } from '../assets/assets'
-const sidebar = () => {
+const Sidebar = () => {
+
+    const [extended, setextended] = useState(false);
     return (
         <div className='sidebar'>
             <div className='top'>
@@ -35,4 +37,4 @@ const sidebar = () => {
         </div>
     )
 }
-export default sidebar;
+export default Sidebar;
